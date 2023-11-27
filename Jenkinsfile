@@ -3,6 +3,7 @@ pipeline {
 
     tools {
         gradle "jenkis-gradle"
+        java "java17"
     }
 
     stages {
