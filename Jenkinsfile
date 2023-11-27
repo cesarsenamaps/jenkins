@@ -5,10 +5,6 @@ pipeline {
         gradleHome = tool 'jenkins-gradle'
     }
 
-    tools {
-        jdk 'java-17'
-    }
-
     stages {
         stage('Build') {
             steps {
