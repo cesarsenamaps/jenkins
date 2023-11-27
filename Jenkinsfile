@@ -6,14 +6,14 @@ pipeline {
             steps {
                 echo "Building"
 
-                sh "gradle clean && gradle build -x test"
+                sh "./gradlew clean && ./gradlew build -x test"
             }
         }
         stage('Test') {
             steps {
                 echo "Testing"
 
-                sh "gradle test"
+                sh "./gradlew test"
             }
         }
         stage('Deploy') {
