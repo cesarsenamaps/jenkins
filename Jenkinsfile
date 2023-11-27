@@ -3,13 +3,15 @@ pipeline {
 
     tools {
         gradle "jenkis-gradle"
-        java "java17"
     }
 
     stages {
         stage('Build') {
             steps {
                 echo "Building"
+
+                sh "java --version"
+                sh "gradle --version"
 
                 sh "./gradlew clean && ./gradlew build -x test"
             }
