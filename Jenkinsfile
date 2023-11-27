@@ -5,13 +5,19 @@ pipeline {
         gradle "jenkis-gradle"
     }
 
+    options {
+     buildDiscarder(logRotator(numToKeepStr: '1'))
+    }
+
     stages {
         stage('Build') {
             steps {
                 echo "Building"
 
-                sh "java --version"
-                sh "gradle --version"
+                echo "Java VERSION"
+                sh 'java --version'
+                echo "Maven VERSION"
+                sh 'mvn --version'
 
                 sh "./gradlew clean && ./gradlew build -x test"
             }
