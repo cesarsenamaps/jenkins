@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        gradle "Gradle 8.4"
+        gradle "jenkis-gradle"
     }
 
     stages {
