@@ -16,8 +16,8 @@ pipeline {
 
                 echo "Java VERSION"
                 sh 'java --version'
-                echo "Maven VERSION"
-                sh 'mvn --version'
+                echo "Gradle VERSION"
+                sh './gradlew --version'
 
                 sh "./gradlew clean && ./gradlew build -x test"
             }
