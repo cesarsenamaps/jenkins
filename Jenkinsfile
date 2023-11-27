@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        gradleHome = tool 'jenkins-gradle'
-    }
-
     stages {
         stage('Build') {
             steps {
