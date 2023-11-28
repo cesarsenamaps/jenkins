@@ -19,14 +19,14 @@ pipeline {
                 echo "Gradle VERSION"
                 sh 'gradle --version'
 
-                sh "./gradlew clean && ./gradlew build -x test"
+                sh "gradle clean && gradle build -x test"
             }
         }
         stage('Test') {
             steps {
                 echo "Testing"
 
-                sh "./gradlew test"
+                sh "gradle test"
             }
         }
         stage('Deploy') {
